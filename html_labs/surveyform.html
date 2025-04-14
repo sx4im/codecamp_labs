@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Saim Shafique  -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Please fill out this form to help us improve our services.</p>
+    <form id="survey-form">
+        <label for="name" id="name-label">Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+
+        <label for="email" id="email-label">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+        <label for="number" id="number-label">Age (optional):</label><br>
+        <input type="number" id="number" name="number" min="18" max="100" placeholder="Enter your age"><br><br>
+
+        <label for="dropdown">Which option best describes your current role?</label><br>
+        <select id="dropdown" name="role">
+            <option value="student">Student</option>
+            <option value="job">Full Time Job</option>
+            <option value="learner">Full Time Learner</option>
+            <option value="preferNo">Prefer not to say</option>
+            <option value="other">Other</option>
+        </select><br><br>
+
+        <p>Would you recommend us to a friend?</p>
+        <label><input type="radio" name="recommend" value="definitely"> Definitely</label><br>
+        <label><input type="radio" name="recommend" value="maybe"> Maybe</label><br>
+        <label><input type="radio" name="recommend" value="not-sure"> Not sure</label><br><br>
+
+        <p>What features do you like most?</p>
+        <label><input type="checkbox" name="features" value="front-end"> Front-end projects</label><br>
+        <label><input type="checkbox" name="features" value="back-end"> Back-end projects</label><br>
+        <label><input type="checkbox" name="features" value="data-vis"> Data visualization</label><br>
+        <label><input type="checkbox" name="features" value="challenges"> Challenges</label><br>
+        <label><input type="checkbox" name="features" value="open-source"> Open source community</label><br><br>
+
+        <label for="comments">Any comments or suggestions?</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+
+        <button type="submit" id="submit">Submit</button>
+    </form>
+</body>
+
+</html>

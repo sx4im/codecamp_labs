@@ -1,0 +1,70 @@
+<!-- Saim Shafique -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+
+        section {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Checkout</h1>
+
+    <section>
+        <h2>Your Cart</h2>
+        <img src="https://cdn.freecodecamp.org/curriculum/labs/cube.jpg" alt="A colorful cube">
+        <p>Product: Cube</p>
+        <p>Price: $19.99</p>
+    </section>
+
+    <section>
+        <h2>Payment Information</h2>
+        <form>
+            <label for="card-name">Cardholder Name:</label>
+            <input type="text" id="card-name" name="card-name" required aria-required="true">
+
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" name="card-number" required aria-required="true">
+
+            <label for="expiry-date">Expiry Date:</label>
+            <input type="text" id="expiry-date" name="expiry-date">
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv">
+
+            <button type="submit">Complete Purchase</button>
+        </form>
+    </section>
+</body>
+
+</html>
