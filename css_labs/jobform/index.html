@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <h1>Job Application</h1>
+
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="position">Position:</label>
+                <select id="position" name="position" required>
+                    <option value="">Select a position</option>
+                    <option value="developer">Web Developer</option>
+                    <option value="designer">UI/UX Designer</option>
+                    <option value="manager">Project Manager</option>
+                    <option value="marketer">Digital Marketer</option>
+                </select>
+            </div>
+
+            <fieldset class="radio-group">
+                <legend>Availability:</legend>
+
+                <div class="radio-option">
+                    <input type="radio" id="full-time" name="availability" value="full-time">
+                    <label for="full-time">Full-Time</label>
+                </div>
+
+                <div class="radio-option">
+                    <input type="radio" id="part-time" name="availability" value="part-time">
+                    <label for="part-time">Part-Time</label>
+                </div>
+
+                <div class="radio-option">
+                    <input type="radio" id="contract" name="availability" value="contract">
+                    <label for="contract">Contract</label>
+                </div>
+            </fieldset>
+
+            <div class="form-group">
+                <label for="message">Cover Letter:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</body>
+
+</html>

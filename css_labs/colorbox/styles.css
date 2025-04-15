@@ -1,0 +1,43 @@
+body {
+  background-color: #f4f4f4; /* Ensure correct hex value */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.color-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 800px;
+}
+
+.color-box {
+  width: 100px; /* Explicit width */
+  height: 100px; /* Explicit height */
+  margin: 10px;
+}
+
+.color1 {
+  background-color: #ff5733; /* Hexadecimal */
+}
+
+.color2 {
+  background-color: rgb(0, 150, 200); /* RGB */
+}
+
+.color3 {
+  background-color: lightgreen; /* Predefined (word) */
+}
+
+.color4 {
+  background-color: hsl(120, 70%, 50%); /* HSL */
+}
+
+.color5 {
+  background-color: rgba(255, 192, 203, 0.7); /* RGBA (valid color) */
+}

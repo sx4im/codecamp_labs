@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+/* Test #10: Focus pseudo-class using list selector in given order */
+input:focus,
+textarea:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+/* Test #11: Invalid pseudo-class using list selector in given order */
+input:invalid,
+select:invalid,
+textarea:invalid {
+  border-color: red;
+}
+
+/* Test #12: Valid pseudo-class using list selector in given order */
+input:valid,
+select:valid,
+textarea:valid {
+  border-color: green;
+}
+
+/* Test #16: nth-child pseudo-class for input elements */
+input:nth-child(1) {
+  border-radius: 20px;
+  background-color: #f9f9f9;
+}
+
+.radio-group {
+  border: none;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 10px;
+  color: #555;
+}
+
+.radio-option {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.radio-option input[type="radio"] {
+  width: auto;
+  margin-right: 10px;
+}
+
+/* Test #14: Checked pseudo-class for radio buttons */
+.radio-group input[type="radio"]:checked {
+  border-color: #4a90e2;
+  background-color: #4a90e2;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+/* Test #15: Checked pseudo-class for radio button labels */
+.radio-group input[type="radio"]:checked + label {
+  color: #4a90e2;
+  font-weight: bold;
+}
+
+button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  width: 100%;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Test #13: Hover pseudo-class for button */
+button:hover {
+  background-color: #357abd;
+}
