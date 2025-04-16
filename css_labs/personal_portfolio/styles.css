@@ -1,0 +1,273 @@
+/* Global Styles */
+:root {
+  --primary-color: #3498db; /* A nice blue */
+  --secondary-color: #2c3e50; /* Darker shade */
+  --text-color: #333;
+  --light-text-color: #f4f4f4;
+  --background-color: #ecf0f1; /* Light gray */
+  --accent-color: #e67e22; /* Orange accent */
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding and border are within the element's width and height */
+  scroll-behavior: smooth; /* For smooth scrolling when clicking navbar links */
+}
+
+/* Typography */
+h1,
+h2 {
+  font-weight: bold;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 1em;
+  color: var(--text-color);
+  margin-bottom: 1em;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* Navbar */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--secondary-color);
+  z-index: 100;
+  padding: 1em 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 1200px;
+}
+
+#navbar li {
+  display: inline;
+  margin: 0 1em;
+}
+
+#navbar a {
+  color: var(--light-text-color);
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#navbar a:hover {
+  background-color: var(--primary-color);
+}
+
+/* Welcome Section */
+#welcome-section {
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 2em;
+}
+
+.welcome-content {
+  max-width: 800px;
+}
+
+#welcome-section h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  color: var(--primary-color);
+}
+
+#welcome-section p {
+  font-size: 1.2em;
+  color: var(--secondary-color);
+  margin-bottom: 1.5em;
+}
+
+.social-links a {
+  margin: 0 0.5em;
+}
+
+.social-links img {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.social-links img:hover {
+  opacity: 1;
+}
+
+/* Projects Section */
+#project-section {
+  padding: 4em 2em;
+  background-color: var(--light-text-color);
+}
+
+#project-section h2 {
+  margin-bottom: 2em;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2em;
+  margin-top: 2em;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-tile {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-tile:hover {
+  transform: translateY(-5px);
+}
+
+.project-tile a {
+  display: block;
+}
+
+.project-tile img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid #ddd;
+}
+
+.project-title {
+  padding: 1.5em;
+  font-weight: bold;
+  color: var(--secondary-color);
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.show-all-projects {
+  display: inline-block;
+  margin-top: 3em;
+  padding: 1em 2em;
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.show-all-projects:hover {
+  background-color: var(--accent-color);
+}
+
+/* Footer */
+footer {
+  background-color: var(--secondary-color);
+  color: var(--light-text-color);
+  text-align: center;
+  padding: 2em;
+  font-size: 0.9em;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+  #navbar ul {
+    padding: 0.5em 0;
+  }
+
+  #navbar li {
+    margin: 0 0.75em;
+  }
+
+  #welcome-section h1 {
+    font-size: 2.8em;
+  }
+
+  #welcome-section p {
+    font-size: 1.1em;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  #navbar ul {
+    text-align: center;
+    padding: 0.5em;
+  }
+
+  #navbar li {
+    display: block;
+    margin: 0.75em 0;
+  }
+
+  #navbar a {
+    display: block;
+    padding: 0.75em 1.25em;
+    border-radius: 5px;
+  }
+
+  #welcome-section h1 {
+    font-size: 2.2em;
+  }
+
+  #welcome-section p {
+    font-size: 1em;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  #welcome-section h1 {
+    font-size: 2em;
+  }
+
+  #welcome-section p {
+    font-size: 0.9em;
+  }
+
+  .project-tile {
+    margin-bottom: 1.5em;
+  }
+}

@@ -1,0 +1,155 @@
+/* Base & Variables */
+:root {
+  --primary-color: #2c3e50;
+  --accent-color: #e74c3c;
+  --background-color: #ecf0f1;
+  --light-color: #ffffff;
+  --dark-color: #34495e;
+  --font-family: "Roboto", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  line-height: 1.6;
+  padding-top: 70px; /* space for fixed nav */
+}
+
+/* Header & Navigation */
+#header {
+  background-color: var(--light-color);
+  padding: 20px 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+#header-img {
+  max-width: 120px;
+  margin: 0 auto 10px;
+  display: block;
+}
+
+/* Nav Bar */
+#nav-bar {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--light-color);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+  z-index: 1000;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--dark-color);
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent-color);
+}
+
+/* Main Content */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  margin: 40px 0;
+  text-align: center;
+}
+
+h1,
+h2 {
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* Video Styling */
+#video {
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+  display: block;
+  border: 3px solid var(--accent-color);
+  border-radius: 4px;
+}
+
+/* Form Styling */
+#form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#email {
+  padding: 12px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#submit {
+  padding: 12px 25px;
+  border: none;
+  background-color: var(--accent-color);
+  color: var(--light-color);
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submit:hover {
+  background-color: var(--dark-color);
+}
+
+/* Footer Styling */
+#footer {
+  background-color: var(--light-color);
+  text-align: center;
+  padding: 15px;
+  border-top: 1px solid #ddd;
+}
+
+/* Flexbox Example: A container to display features in a row (if needed) */
+.features-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+  #nav-bar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .features-container {
+    flex-direction: column;
+  }
+}

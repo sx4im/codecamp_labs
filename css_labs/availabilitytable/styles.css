@@ -1,0 +1,101 @@
+:root {
+  /* Color variables for availability levels */
+  --color0: red;
+  --color1: orange;
+  --color2: yellow;
+  --color3: green;
+  --color4: blue;
+  --color5: purple;
+
+  /* Border variables */
+  --solid-border: 2px solid #333;
+  --dashed-border: 2px dashed #333;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.time {
+  text-align: right;
+}
+
+/* Availability background colors */
+.available-0 {
+  background-color: var(--color0);
+}
+
+.available-1 {
+  background-color: var(--color1);
+}
+
+.available-2 {
+  background-color: var(--color2);
+}
+
+.available-3 {
+  background-color: var(--color3);
+}
+
+.available-4 {
+  background-color: var(--color4);
+}
+
+.available-5 {
+  background-color: var(--color5);
+}
+
+/* Border styles for different row types */
+.sharp td {
+  border-bottom: var(--solid-border);
+}
+
+.half td {
+  border-bottom: var(--dashed-border);
+}
+
+/* Legend styles */
+#legend {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#legend span {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#legend-gradient {
+  width: 75%;
+  height: 15px;
+  background-image: linear-gradient(
+    90deg,
+    var(--color0) 16%,
+    var(--color1) 16% 33%,
+    var(--color2) 33% 49%,
+    var(--color3) 49% 66%,
+    var(--color4) 66% 83%,
+    var(--color5) 83%
+  );
+}

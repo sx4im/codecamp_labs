@@ -1,0 +1,68 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background: linear-gradient(
+    to bottom,
+    #000020,
+    #000040
+  ); /* Dark space background */
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+.space {
+  position: relative;
+  width: 300px; /* Increased size */
+  height: 300px;
+}
+
+.earth {
+  position: absolute;
+  width: 150px; /* Increased size */
+  height: 150px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle at 40% 40%,
+    #0080ff,
+    #003366
+  ); /* Earth gradient */
+  box-shadow: 0 0 20px rgba(0, 128, 255, 0.5); /* Glowing effect */
+  border-radius: 50%;
+}
+
+.orbit {
+  position: absolute;
+  width: 300px; /* Increased size */
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px dashed rgba(255, 255, 255, 0.2); /* Faint orbit line */
+  border-radius: 50%;
+  animation: orbit 8s linear infinite; /* Slower animation */
+}
+
+.moon {
+  position: absolute;
+  width: 40px; /* Increased size */
+  height: 40px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle at center, #aaa, #666); /* Moon gradient */
+  box-shadow: 0 0 10px rgba(170, 170, 170, 0.5); /* Glowing effect */
+  border-radius: 50%;
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+  100% {
+    transform: rotate(360deg) translate(-50%, -50%);
+  }
+}
